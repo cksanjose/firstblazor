@@ -1,0 +1,53 @@
+﻿@page "/golfholes"
+@inject HttpClient Http
+
+<h1>Golf Holes</h1>
+
+@if (golfHoles == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Distance</th>
+                <th>Par</th>
+                <th>Skill</th>
+                <th>Hazard</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var golfHole in golfHoles)
+            {
+                <tr>
+                    <td>@golfHole.Distance</td>
+                    <td>@golfHole.Par</td>
+                    <td>@golfHole.Skill</td>
+                    <td>@golfHole.Hazard</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@functions {
+
+    GolfHole[] golfHoles;
+
+    protected override async Task OnInitAsync()
+    {
+        golfHoles = await Http.GetJsonAsync<GolfHole[]>("/sample-data/holes.json");
+    }
+
+    class GolfHole
+    {
+        public int HoleId { get; set; }
+        public int Distance { get; set; }
+        public int Par { get; set; }
+        public string Skill { get; set; }
+        public string Hazard { get; set; }
+        public int AverageSwingsToGreen { get; set; }
+    }
+}
