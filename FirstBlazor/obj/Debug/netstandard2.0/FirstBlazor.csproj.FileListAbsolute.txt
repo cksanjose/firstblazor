@@ -71,3 +71,5 @@ C:\GitHub\cksanjose\FirstBlazor\FirstBlazor\obj\Debug\netstandard2.0\blazor\inde
 C:\GitHub\cksanjose\FirstBlazor\FirstBlazor\obj\Debug\netstandard2.0\Pages\GolfHoles.g.i.cs
 C:\GitHub\cksanjose\FirstBlazor\FirstBlazor\obj\Debug\netstandard2.0\Pages\GolfHoles.g.cs
 C:\GitHub\cksanjose\FirstBlazor\FirstBlazor\obj\Debug\netstandard2.0\FirstBlazor.csprojAssemblyReference.cache
+C:\GitHub\cksanjose\FirstBlazor\FirstBlazor\obj\Debug\netstandard2.0\Shared\Footer.g.i.cs
+C:\GitHub\cksanjose\FirstBlazor\FirstBlazor\obj\Debug\netstandard2.0\Shared\Footer.g.cs

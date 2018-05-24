@@ -23,6 +23,15 @@
 
   <ItemGroup>
     <None Include="Pages\GolfHoles.cshtml" />
+    <None Include="Shared\Footer.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <BlazorGenerate Remove="Shared\Footer.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Shared\Footer.cshtml" />
   </ItemGroup>
 
 </Project>
