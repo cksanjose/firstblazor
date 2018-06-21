@@ -8,9 +8,9 @@ namespace FirstBlazor.Shared
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using System.Net.Http;
     using Microsoft.AspNetCore.Blazor;
     using Microsoft.AspNetCore.Blazor.Components;
+    using System.Net.Http;
     using Microsoft.AspNetCore.Blazor.Layouts;
     using Microsoft.AspNetCore.Blazor.Routing;
     using FirstBlazor;
@@ -56,8 +56,8 @@ namespace FirstBlazor.Shared
             builder.OpenElement(26, "div");
             builder.AddAttribute(27, "class", "footer");
             builder.AddContent(28, "\n    ");
-            builder.OpenComponent<FirstBlazor.Shared.Footer>(29);
-            builder.CloseComponent();
+            builder.OpenElement(29, "footer");
+            builder.CloseElement();
             builder.AddContent(30, "\n");
             builder.CloseElement();
         }

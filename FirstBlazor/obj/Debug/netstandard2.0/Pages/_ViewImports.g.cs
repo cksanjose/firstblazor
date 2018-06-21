@@ -8,9 +8,9 @@ namespace FirstBlazor.Pages
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using System.Net.Http;
     using Microsoft.AspNetCore.Blazor;
     using Microsoft.AspNetCore.Blazor.Components;
+    using System.Net.Http;
     using Microsoft.AspNetCore.Blazor.Layouts;
     using Microsoft.AspNetCore.Blazor.Routing;
     using FirstBlazor;

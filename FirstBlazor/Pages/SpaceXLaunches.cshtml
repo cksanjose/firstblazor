@@ -1,0 +1,66 @@
+﻿@page "/spacexlaunches"
+@inject HttpClient Http
+
+<h1>Space X Launch</h1>
+
+@if (spaceLaunches == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Flight Number</th>
+                <th>Mission Name</th>
+                <th>Launch Year</th>
+                <th>Details</th>
+                <th>Launch Date</th>
+                <th>Site Id</th>
+                <th>Site Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var spaceLaunch in spaceLaunches)
+            {
+            <tr>
+                <td>@spaceLaunch.flight_number</td>
+                <td>@spaceLaunch.mission_name</td>
+                <td>@spaceLaunch.launch_year</td>
+                <td>@spaceLaunch.details</td>
+                <td>@spaceLaunch.launch_date_local</td>
+                <td>@spaceLaunch.launch_site.site_id</td>
+                <td>@spaceLaunch.launch_site.site_name_long</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@functions {
+
+    SpaceXLaunch[] spaceLaunches;
+
+    protected override async Task OnInitAsync()
+    {
+        spaceLaunches = await Http.GetJsonAsync<SpaceXLaunch[]>(@"https://api.spacexdata.com/v2/launches");
+    }
+
+    class SpaceXLaunch
+    {
+        public int flight_number { get; set; }
+        public string mission_name { get; set; }
+        public string launch_year { get; set; }
+        public string details { get; set; }
+        public string launch_date_local { get; set; }
+        public LaunchSite launch_site { get; set; }
+    }
+
+    class LaunchSite
+    {
+        public string site_id { get; set; }
+        public string site_name { get; set; }
+        public string site_name_long { get; set; }
+    }
+}

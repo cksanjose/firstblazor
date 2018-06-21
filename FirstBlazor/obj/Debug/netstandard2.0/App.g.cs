@@ -8,9 +8,9 @@ namespace FirstBlazor
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
-    using System.Net.Http;
     using Microsoft.AspNetCore.Blazor;
     using Microsoft.AspNetCore.Blazor.Components;
+    using System.Net.Http;
     using Microsoft.AspNetCore.Blazor.Layouts;
     using Microsoft.AspNetCore.Blazor.Routing;
     using FirstBlazor;
@@ -21,9 +21,8 @@ namespace FirstBlazor
         protected override void BuildRenderTree(Microsoft.AspNetCore.Blazor.RenderTree.RenderTreeBuilder builder)
         {
             base.BuildRenderTree(builder);
-            builder.AddContent(0, "\n");
-            builder.OpenComponent<Microsoft.AspNetCore.Blazor.Routing.Router>(1);
-            builder.AddAttribute(2, "AppAssembly", typeof(Program).Assembly);
+            builder.OpenComponent<Microsoft.AspNetCore.Blazor.Routing.Router>(0);
+            builder.AddAttribute(1, "AppAssembly", Microsoft.AspNetCore.Blazor.Components.RuntimeHelpers.TypeCheck<System.Reflection.Assembly>(typeof(Program).Assembly));
             builder.CloseComponent();
         }
         #pragma warning restore 1998
