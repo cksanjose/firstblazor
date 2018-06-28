@@ -579,11 +579,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\cksanjose\\firstblazor\\FirstBlazor\\FirstBlazor.csproj",
+      "projectUniqueName": "C:\\GitHub\\cksanjose\\FirstBlazor\\FirstBlazor\\FirstBlazor.csproj",
       "projectName": "FirstBlazor",
-      "projectPath": "C:\\GitHub\\cksanjose\\firstblazor\\FirstBlazor\\FirstBlazor.csproj",
+      "projectPath": "C:\\GitHub\\cksanjose\\FirstBlazor\\FirstBlazor\\FirstBlazor.csproj",
       "packagesPath": "C:\\Users\\sanjces\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub\\cksanjose\\firstblazor\\FirstBlazor\\obj\\",
+      "outputPath": "C:\\GitHub\\cksanjose\\FirstBlazor\\FirstBlazor\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
